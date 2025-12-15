@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./server
+    container_name: n8n-architect-backend
+    ports:
+      - "3001:3001"
+    restart: always
+    environment:
+      - PORT=3001
+      # Adicionar variáveis de ambiente aqui ou via arquivo .env na VPS
+
+  frontend:
+    build: .
+    container_name: n8n-architect-frontend
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:
+      - backend
