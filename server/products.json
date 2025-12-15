@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Pack Automação WhatsApp",
+    "price": 97,
+    "type": "one_time",
+    "sales": 124,
+    "revenue": 12028,
+    "active": true,
+    "orderBumpActive": true,
+    "orderBumpName": "Acesso Vitalício à Comunidade",
+    "orderBumpPrice": 29.9
+  },
+  {
+    "id": "2",
+    "name": "Mentoria N8N Pro",
+    "price": 997,
+    "type": "one_time",
+    "sales": 12,
+    "revenue": 11964,
+    "active": true,
+    "orderBumpActive": false
+  },
+  {
+    "id": "3",
+    "name": "Comunidade Nexus (Mensal)",
+    "price": 29.9,
+    "type": "subscription",
+    "sales": 450,
+    "revenue": 13455,
+    "active": true,
+    "orderBumpActive": false
+  }
+]

@@ -1,0 +1,18 @@
+{
+    "name": "n8n-architect-backend",
+    "version": "1.0.0",
+    "description": "Backend server for N8N Architect payment processing",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.87.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.18.2",
+        "mercadopago": "^2.0.9"
+    }
+}
