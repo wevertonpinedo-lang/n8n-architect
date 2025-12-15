@@ -5,12 +5,15 @@ let client: OpenAI | null = null;
 let currentMode: 'automation' | 'sales' = 'automation';
 
 const getClient = () => {
-    if (!process.env.OPENAI_API_KEY) {
-        throw new Error("OPENAI_API_KEY is missing. Please set it in your environment variables.");
+    // Tenta pegar a chave do Vite (VITE_) ou do ambiente Node (process.env)
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY || '';
+
+    if (!apiKey) {
+        throw new Error("OPENAI_API_KEY is missing. Please set VITE_OPENAI_API_KEY in your .env file.");
     }
     if (!client) {
         client = new OpenAI({
-            apiKey: process.env.OPENAI_API_KEY,
+            apiKey: apiKey,
             dangerouslyAllowBrowser: true
         });
     }
